@@ -1,16 +1,14 @@
-# Twitter Scraper - Python
+# Twitter Scraper - python3
 
 A simple Twitter scraper that scrapes tweets from a user's profile, hashtag, or query.
-Based on the following repository: [Twitter Scraper](
-  https://github.com/godkingjay/selenium-twitter-scraper
-)
+Based on the following repository: [Twitter Scraper](https://github.com/godkingjay/selenium-twitter-scraper)
 
 ## Setup
 
 1. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Authentication Options
@@ -32,7 +30,7 @@ TWITTER_PASSWORD=# Your Twitter Password
 - Add a `username` and `password` to the command line.
 
 ```bash
-python scraper --user=@elonmusk --password=password123
+python3 scraper --user=@elonmusk --password=password123
 ```
 
 ### No Authentication Provided
@@ -61,25 +59,25 @@ Password: password123
 - Show Help
 
 ```bash
-python scraper --help
+python3 scraper --help
 ```
 
 - Basic usage
 
 ```bash
-python scraper
+python3 scraper
 ```
 
 - Setting maximum number of tweets. defaults to `50`.
 
 ```bash
-python scraper --tweets=500   # Scrape 500 Tweets
+python3 scraper --tweets=500   # Scrape 500 Tweets
 ```
 
 - Options and Arguments
 
 ```bash
-usage: python scraper [option] ... [arg] ...
+usage: python3 scraper [option] ... [arg] ...
 
 authentication options  description
 --user                  : Your twitter account Handle.
@@ -130,13 +128,13 @@ options:                description
                           Note: Only for hashtag-based
                           and query-based scraping.
                           usage:
-                            python scraper -t 500 -ht=python --latest
+                            python3 scraper -t 500 -ht=python3 --latest
 
 --top                   : Twitter top tweets (default: False).
                           Note: Only for hashtag-based
                           and query-based scraping.
                           usage:
-                            python scraper -t 500 -ht=python --top
+                            python3 scraper -t 500 -ht=python3 --top
 
 -ntl, --no_tweets_limit : Set no limit to the number of tweets to scrape
                           (will scrap until no more tweets are available).
@@ -147,13 +145,13 @@ options:                description
 - **Custom Limit Scraping**
 
 ```bash
-python scraper -t 500
+python3 scraper -t 500
 ```
 
 - **User Profile Scraping**
 
 ```bash
-python scraper -t 100 -u elonmusk
+python3 scraper -t 100 -u elonmusk
 ```
 
 - **Hashtag Scraping**
@@ -161,13 +159,13 @@ python scraper -t 100 -u elonmusk
   - Latest
 
     ```bash
-    python scraper -t 100 -ht python --latest
+    python3 scraper -t 100 -ht python3 --latest
     ```
 
   - Top
 
     ```bash
-    python scraper -t 100 -ht python --top
+    python3 scraper -t 100 -ht python3 --top
     ```
 
 - **Query or Search Scraping**
@@ -176,13 +174,13 @@ python scraper -t 100 -u elonmusk
   - Latest
 
     ```bash
-    python scraper -t 100 -q "Jak Roberto Anti Selos" --latest
+    python3 scraper -t 100 -q "Jak Roberto Anti Selos" --latest
     ```
 
   - Top
 
     ```bash
-    python scraper -t 100 -q "International News" --top
+    python3 scraper -t 100 -q "International News" --top
     ```
 
 - **Advanced Search Scraping**
@@ -190,13 +188,13 @@ python scraper -t 100 -u elonmusk
   - For tweets mentioning `@elonmusk`:
 
     ```bash
-    python scraper --query="(@elonmusk)"
+    python3 scraper --query="(@elonmusk)"
     ```
 
   - For tweets that mentions `@elonmusk` with at least `1000` replies from `January 01, 2020 - August 31, 2023`:
 
     ```bash
-    python scraper --query="(@elonmusk) min_replies:1000 until:2023-08-31 since:2020-01-01"
+    python3 scraper --query="(@elonmusk) min_replies:1000 until:2023-08-31 since:2020-01-01"
     ```
 
   - Perform more `Advanced Search` using Twitter's Advanced Search, just setup the advanced query and copy the resulting string query to the program:
@@ -204,7 +202,7 @@ python scraper -t 100 -u elonmusk
 - **Scrape Additional Data**
 
 ```bash
-python scraper --add="pd"
+python3 scraper --add="pd"
 ```
 
 | Values | Description                                        |

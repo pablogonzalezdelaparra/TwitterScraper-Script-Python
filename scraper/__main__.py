@@ -84,7 +84,8 @@ def main():
             "-q",
             "--query",
             type=str,
-            default=None,
+            # default='("Lil Uzi" OR "Eternal Atake") lang:en until:2020-03-12 since:2020-03-06 -filter:links -filter:replies',
+            default='("21 Savage" OR "Metro Boomin" OR "Savage Mode") lang:en until:2020-10-09 since:2020-10-02 -filter:links -filter:replies',
             help="Twitter query or search. Scrape tweets from a query or search.",
         )
 
